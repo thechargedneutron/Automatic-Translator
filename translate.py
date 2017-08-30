@@ -12,18 +12,18 @@ def Translate(data, _to_lang, _from_lang):
 	data: A word or a string.
 	    Also accepts a raw utf-8 string.
 
-    _to_lang: The language of the desired output.
-        Use ISO standard names or RFC3066 code for language code.
-        Codes available at http://www.i18nguy.com/unicode/language-identifiers.html
+	_to_lang: The language of the desired output.
+	    Use ISO standard names or RFC3066 code for language code.
+	    Codes available at http://www.i18nguy.com/unicode/language-identifiers.html
 
-    _from_lang: The language of the input.
-        Use ISO standard names or RFC3066 code for language code.
-        Codes available at http://www.i18nguy.com/unicode/language-identifiers.html
+	_from_lang: The language of the input.
+	    Use ISO standard names or RFC3066 code for language code.
+	    Codes available at http://www.i18nguy.com/unicode/language-identifiers.html
 
-    Returns
-    -------
-    translation: The translated word or string.
-        Can also be used as a raw utf-8 string.
+	Returns
+	-------
+	translation: The translated word or string.
+	    Can also be used as a raw utf-8 string.
 	"""
 	translator = Translator(to_lang=_to_lang, from_lang=_from_lang)
 	translation = translator.translate(data)
