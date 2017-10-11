@@ -1,0 +1,78 @@
+#:kivy 1.0.9
+ScreenManagement:
+    MainScreen
+
+<MainScreen>:
+    name:"main"
+    FloatLayout:
+        DrawPencil:
+		    id: drawing
+            pencil_active: pencil_button.state=='down'
+    GridLayout:
+        size_hint: 1, 0.1
+        pos_hint:{'center_x':0.5,'center_y':0.95}
+        cols:1
+        BoxLayout:
+            Label:
+                text: 'HANDWRITTEN LANGUAGE TRANSLATOR'
+                color: 0,0,0,1
+    GridLayout:
+        size_hint: 1, 0.1
+        pos_hint:{'center_x':0.5,'center_y':0.8 }
+        cols:1
+        BoxLayout:
+            Label:
+                text: 'From : '
+                valign: 'top'
+                color: 0,0,0,1
+            Spinner:
+                id: from_language
+                text: 'Select'
+                values: ('English', 'Hindi')
+                size_hint_y: 0.8
+                pos_hint:{'center_x':0.8, 'center_y':0.7}
+                color: 0,0,0,1
+                background_color:(1,1,1,0)
+            Label:
+                text: 'To : '
+                color: 0,0,0,1
+            Spinner:
+                id: to_language
+                text: 'Select'
+                values: ('English', 'Hindi')
+                size_hint_y: 0.8
+                pos_hint:{'center_x':0.8, 'center_y':0.7}
+                color: 0,0,0,1
+                background_color:(1,1,1,0)
+        BoxLayout:
+            Button:
+                text: 'Start'
+                color: 1,1,1,1
+                on_release:
+                    root.draw_rectangle()
+					drawing.canvas.clear()
+            ToggleButton:
+                id: pencil_button
+                text: "Start Drawing"
+                color: 1,1,1,1
+    GridLayout:
+        size_hint: 1, 0.05
+        pos_hint:{'center_x':0.5,'center_y':0.4}
+        cols:1
+        BoxLayout:
+            Button:
+                text: 'Translate'
+                color: 1,1,1,1
+                on_release:
+                    root.predict_inputs()
+	GridLayout:
+	    size_hint: 1, 0.1
+		pos_hint:{'center_x':0.5,'center_y':0.2}
+		cols:1
+		BoxLayout:
+		    Label:
+			    id: output_one
+			    text: ' '
+				font_size: '150'
+				font_name: 'FreeSans.ttf'
+				color: 1,0,0,1
