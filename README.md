@@ -22,7 +22,7 @@ A simple language translator which takes in strokes of letters and converts the 
 
 ## Demo
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/KbpMcCN0BSA" frameborder="0" allowfullscreen></iframe>
+[A demo video of the trnaslator](https://www.youtube.com/watch?v=KbpMcCN0BSA)
 
-## Examples
+## Example Images
 
