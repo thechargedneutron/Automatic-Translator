@@ -26,3 +26,6 @@ A simple language translator which takes in strokes of letters and converts the 
 
 ## Example Images
 
+![paint](https://cloud.githubusercontent.com/assets/25536866/25718546/23d43724-3124-11e7-8b5e-aa09aefdcaa1.png)
+![paint](https://cloud.githubusercontent.com/assets/25536866/25718546/23d43724-3124-11e7-8b5e-aa09aefdcaa1.png)
+![paint](https://cloud.githubusercontent.com/assets/25536866/25718546/23d43724-3124-11e7-8b5e-aa09aefdcaa1.png)
